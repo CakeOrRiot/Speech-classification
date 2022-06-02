@@ -1,0 +1,5 @@
+SVM
+Params: {'SVM': {'C': 1.0, 'break_ties': False, 'cache_size': 200, 'class_weight': None, 'coef0': 0.0, 'decision_function_shape': 'ovr', 'degree': 3, 'gamma': 'scale', 'kernel': 'rbf', 'max_iter': -1, 'probability': False, 'random_state': None, 'shrinking': True, 'tol': 0.001, 'verbose': False}, 'StandartScaler': {'copy': True, 'with_mean': True, 'with_std': True}}
+Train: {'accuracy': 1.0, 'precision': array([1., 1.]), 'recall': array([1., 1.]), 'f1': array([1., 1.])}
+Test: {'accuracy': 0.9965141612200435, 'precision': array([0.99658994, 0.99643494]), 'recall': array([0.99658994, 0.99643494]), 'f1': array([0.99658994, 0.99643494])}
+Config(raw_data_path=PosixPath('data/raw/LibriTTS'), processed_data_path=PosixPath('data/processed/audio'), features='features.csv', features_path=PosixPath('data/processed/audio/../features.csv'), experiments_path=PosixPath('experiments'), random_seed=1312)

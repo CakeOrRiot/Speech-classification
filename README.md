@@ -1,10 +1,16 @@
-# Speech-recognition
+# Speech-classification
 
-# How to run
+Данные: LibriTTS (dev-clean)
 
-Run
+# Запуск
 
-     python get_data.py 
+Установка зависимостей:
 
-If you already have LibTTS dataset downloaded (dev-clean.tar.gz), you should put it in root of repository and then run command above.
+     pip install -r requirements.txt
+
+Запуск пайлайна:
+
+     python pipeline.py
+
+После выполнения этой комнаны датасет будет автоматически скачан и предобработан. После этого запустятся все эксперименты. Данные экспериментов будут доступны в папке experiments. Отчёт по уже проведённым экспериментам нахотится в папке reports. 
 
