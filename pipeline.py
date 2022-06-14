@@ -57,12 +57,17 @@ def evaluate(model, data, true_labels):
 
 def experiment(model, model_name=""):
     df = pd.read_csv(config.features_path)
-    X = np.array(df.drop(columns="gender"))
-    y = np.array(df["gender"])
-
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.4, random_state=config.random_seed
+    readers = pd.unique(df["reader"])
+    readers_train, readers_test = train_test_split(
+        readers, test_size=0.4, random_state=config.random_seed
     )
+
+    df_train = df[df["reader"].isin(readers_train)]
+    df_test = df[df["reader"].isin(readers_test)]
+    X_train = np.array(df_train.drop(columns=["gender", "reader"]))
+    X_test = np.array(df_test.drop(columns=["gender", "reader"]))
+    y_train = np.array(df_train["gender"])
+    y_test = np.array(df_test["gender"])
 
     model.fit(X_train, y_train)
     train_score = evaluate(model, X_train, y_train)
@@ -73,7 +78,7 @@ def experiment(model, model_name=""):
 
 if __name__ == "__main__":
     pipeline(
-        features="features.csv",
+        # features="features.csv",
     )
     pipeline(
         need_setup=False,

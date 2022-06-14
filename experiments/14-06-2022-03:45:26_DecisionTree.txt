@@ -1,0 +1,5 @@
+DecisionTree
+Params: {'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'random_state': None, 'splitter': 'best'}
+Train: {'accuracy': 1.0, 'precision': array([1., 1.]), 'recall': array([1., 1.]), 'f1': array([1., 1.])}
+Test: {'accuracy': 0.7049973132724342, 'precision': array([0.89828571, 0.53346856]), 'recall': array([0.63081862, 0.85528455]), 'f1': array([0.74115983, 0.65708932])}
+Config(raw_data_path=PosixPath('data/raw/LibriTTS'), processed_data_path=PosixPath('data/processed/audio'), features='features.csv', features_path=PosixPath('data/processed/audio/../features.csv'), experiments_path=PosixPath('experiments'), random_seed=1312)
